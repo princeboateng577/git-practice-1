@@ -1,1 +1,36 @@
+// Data representing sustainable ecosystem practices in Ommen, Netherlands
+const sustainablePractices = {
+    renewableEnergy: {
+        description: "Ommen has adopted solar and wind energy to reduce carbon emissions.",
+        projects: ["Wind Farms at Lemelerberg", "Solar Parks in Vechtdal Region"]
+    },
+    biodiversity: {
+        description: "Efforts to protect local wildlife and natural habitats.",
+        projects: ["Reforestation along the Vecht River", "Wildlife Corridors for Deer and Foxes"]
+    },
+    sustainableFarming: {
+        description: "Promoting organic and regenerative farming techniques.",
+        farms: ["Vechtdal Organic Farm", "Ommer Eco-Dairy"]
+    }
+};
+
+// Function to display sustainable practices in Ommen
+function displaySustainablePractices() {
+    console.log("Sustainable Ecosystem Practices in Ommen, Netherlands:");
+
+    Object.keys(sustainablePractices).forEach(key => {
+        const practice = sustainablePractices[key];
+        console.log(`\n- ${key.replace(/([A-Z])/g, ' $1').toUpperCase()}:`);
+        console.log(`  Description: ${practice.description}`);
+        if (practice.projects) {
+            console.log(`  Projects: ${practice.projects.join(", ")}`);
+        }
+        if (practice.farms) {
+            console.log(`  Farms: ${practice.farms.join(", ")}`);
+        }
+    });
+}
+
+// Call the function to display the data
+displaySustainablePractices();
  
